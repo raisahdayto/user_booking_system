@@ -1,0 +1,84 @@
+/* Variables (example of how you can use variables) */
+$white: white;
+$bg-primary: #0056b3;
+$bg-light: #f8f9fa;
+$color-primary: #007bff;
+
+/* Base styles */
+.hero-section {
+  background: url('../img/bg.png') no-repeat center center;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  color: $white;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Keyframes for animations */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.text-and-buttons-container {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-primary {
+  background-color: $bg-primary;
+  border: none;
+}
+
+.btn-light {
+  background-color: $bg-light;
+  color: $color-primary;
+  border: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero-section {
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .grid1, .grid2, .grid3 {
+    width: 100px;
+    height: 100px;
+    top: auto;
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
